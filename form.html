@@ -55,14 +55,16 @@
            
            <!-- Name Input -->
            <div class="userDetails" ng-class="{ 'error-msg' : contactForm.name.$invalid && !contactForm.name.$pristine }">
-           <label for="name" name="name">Navn: </label>
+         
              <div class="input-div">
 					     <div class="input-icon">
 					     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+					     <label for="name" name="name">Navn: </label>
+					     </div>
 					     <input id="name" class="input-field" type="text" ng-model="name" name="name" maxlength="20" placeholder="Navn" pattern="[a-zA-Z]+" ng-pattern-restrict required >
-				     </div>
+		                     </div>
                                      <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="error-msg">Indtast dit Navn.</p>
-	                            </div>
+	                          
 		   </div>
           
           <!-- E-mail Input-->
