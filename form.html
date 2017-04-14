@@ -62,7 +62,8 @@
 					     </div>
 					     <input id="name" class="input-field" type="text" ng-model="name" name="name" placeholder="Navn" pattern="[a-zA-Z]+" ng-pattern-restrict required >
 				     </div>
-             <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="error-msg">Your name is required.</p>
+             <p ng-show="contactForm.name.$invalid.required && !contactForm.name.$pristine" class="error-msg">Your name is required.</p>
+	     <p ng-show="contactForm.name.$invalid.pattern && !contactForm.name.$pristine" class="error-msg">Only letters are allowed</p>
 			    </div>
           
           <!-- E-mail Input-->
