@@ -12,7 +12,7 @@
            
            <!-- Start of Contact Form -->
            <div id="form-container" class="container">
-           <form name="contactForm" ng-submit="submitForm(contactForm.$valid)" ng-class="{'has-success' : contactForm.$valid}" ng-hide="contactForm.$submitted" novalidate>
+           <form name="contactForm" ng-submit="submitForm(contactForm.$valid)" ng-class="{'success' : contactForm.$valid}" ng-hide="contactForm.$submitted" novalidate>
           
           <!-- ------------------------------User Details------------------------ -->
            
@@ -30,7 +30,7 @@
 			    </div>
           
           <!-- E-mail Input-->
-          <div class="userDetails" ng-class="{ 'err' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+          <div class="userDetails" ng-class="{ 'error-msg' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 				  <label for="email">Email: </label>
 				    <div class="input-div">
 					    <div class="input-icon">
@@ -56,7 +56,7 @@
       
       <!-- Message -->
       
-      <div class="userDetails" ng-class="{ 'error-msg' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'has-success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
+      <div class="userDetails" ng-class="{ 'error-msg' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
 				<label for="userMessage">Besked</label>
 				<p ng-show="contactForm.userMessage.$error.minlength" class="error-msg">Besked er forkort ...</p>
 				<p ng-show="contactForm.userMessage.$error.maxlength" class="error-msg">Besked er for lang</p>
