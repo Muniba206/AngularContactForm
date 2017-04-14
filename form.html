@@ -18,7 +18,7 @@
            
            
            <!-- Name Input -->
-           <div class="userDetails" ng-class="{ 'has-error' : contactForm.name.$invalid && !contactForm.name.$pristine }"
+           <div class="userDetails" ng-class="{ 'error-msg' : contactForm.name.$invalid && !contactForm.name.$pristine }"
            <label for="name">Navn: </label>
              <div class="input-div">
 					     <div class="input-icon">
@@ -30,7 +30,7 @@
 			    </div>
           
           <!-- E-mail Input-->
-          <div class="userDetails" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
+          <div class="userDetails" ng-class="{ 'err' : contactForm.email.$invalid && !contactForm.email.$pristine }">
 				  <label for="email">Email: </label>
 				    <div class="input-div">
 					    <div class="input-icon">
@@ -43,7 +43,7 @@
          
          <!-- Phone Input -->
          
-         <div class="userDetails" ng-class="{ 'has-error' : contactForm.phone.$invalid && !contactForm.phone.$pristine }">
+         <div class="userDetails" ng-class="{ 'error-msg' : contactForm.phone.$invalid && !contactForm.phone.$pristine }">
 				<label for="phone">Phone Nummer: </label>
 				<div class="input-div">
 					<div class="input-icon">
@@ -56,7 +56,7 @@
       
       <!-- Message -->
       
-      <div class="userDetails" ng-class="{ 'has-error' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'has-success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
+      <div class="userDetails" ng-class="{ 'error-msg' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'has-success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
 				<label for="userMessage">Besked</label>
 				<p ng-show="contactForm.userMessage.$error.minlength" class="error-msg">Besked er forkort ...</p>
 				<p ng-show="contactForm.userMessage.$error.maxlength" class="error-msg">Besked er for lang</p>
