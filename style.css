@@ -14,7 +14,7 @@ form {
 	margin: 0 auto;
 
 }
-input.ng-invalid textarea.ng-invalid{
+input.ng-invalid{
 	border: 1px solid red;
 }
 
@@ -27,4 +27,8 @@ textarea {
 	text-align: center;
 	border: 0px solid #333;
 	padding: 5%;
+}
+
+textarea.ng-invalid{
+	border: 1px solid red;
 }
