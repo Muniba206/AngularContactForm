@@ -69,11 +69,11 @@
           
           <!-- E-mail Input-->
           <div class="userDetails" ng-class="{ 'error-msg' : contactForm.email.$invalid && !contactForm.email.$pristine }">
-				  <label for="email">Email: </label>
-				    <div class="input-div">
-					    <div class="input-icon">
+				  <div class="input-div"> 
+			           <div class="input-icon">
 					     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-					     </div>
+					     <label for="email">Email: </label>
+				             </div>
 					    <input id="email" class="input-field" type="email" ng-model="email" name="email" placeholder="Email" required>
 				    </div>
 				    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="error-msg">Skriv en gyldig e-mailadresse.</p>
@@ -82,10 +82,11 @@
          <!-- Phone Input -->
          
          <div class="userDetails" ng-class="{ 'error-msg' : contactForm.phone.$invalid && !contactForm.phone.$pristine }">
-				<label for="phone">Mobilnummer: </label>
+				
 				<div class="input-div">
 					<div class="input-icon">
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+					<label for="phone">Mobilnummer: </label>
 					</div>
 					<input id="phone" class="input-field" type="text" ng-model="phone" name="phone" placeholder="Feks. 91755748"  ng-pattern="nums" required >
 				</div>
@@ -95,12 +96,13 @@
       <!-- Message -->
       
       <div class="userDetails" ng-class="{ 'error-msg' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
-				<label for="userMessage">Besked</label>
+				
 				<p ng-show="contactForm.userMessage.$error.minlength" class="error-msg">Besked er forkort ...</p>
 				<p ng-show="contactForm.userMessage.$error.maxlength" class="error-msg">Besked er for lang</p>
 				<div class="input-div">
 				     <div class="input-icon">
 				     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+				    <label for="userMessage">Besked</label>
 				     </div>
 			        <textarea id="userMessage" ng-model="userMessage" name="userMessage" class="input-field" ng-minlength="20" ng-maxlength="180" rows="12" placeholder="Skriv besked her" required></textarea>
 	                        </div>
