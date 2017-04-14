@@ -72,7 +72,7 @@
 					    <div class="input-icon">
 					     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 					     </div>
-					    <input id="email" class="input-field" type="email" ng-model="email" name="email" ng-pattern="email" placeholder="Email" required>
+					    <input id="email" class="input-field" type="email" ng-model="email" name="email" placeholder="Email" required>
 				    </div>
 				    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="error-msg">Skriv en gyldig e-mailadresse.</p>
 			   </div>
@@ -85,9 +85,9 @@
 					<div class="input-icon">
 						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
 					</div>
-					<input id="phone" class="input-field" type="text" ng-model="phone" name="phone" placeholder="Ti digit feks. 4591755748"  ng-pattern="nums" required >
+					<input id="phone" class="input-field" type="text" ng-model="phone" name="phone" placeholder="Telefonnummer feks. 91755748"  ng-pattern="nums" required >
 				</div>
-				<p ng-show="contactForm.phone.$error.pattern && !contactForm.phone.$pristine" class="error-msg">Skriv et telefonnummer</p>
+				<p ng-show="contactForm.phone.$error.pattern && !contactForm.phone.$pristine" class="error-msg">Skriv et gyldigt telefonnummer</p>
 			</div>
       
       <!-- Message -->
