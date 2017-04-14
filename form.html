@@ -60,7 +60,7 @@
 					     <div class="input-icon">
 					     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
 					     </div>
-					     <input id="name" class="input-field" type="text" ng-model="name" name="name" placeholder="Navn" required >
+					     <input id="name" class="input-field" type="text" ng-model="name" name="name" placeholder="Navn" pattern="[a-zA-Z]+" ng-pattern-restrict required >
 				     </div>
              <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="error-msg">Your name is required.</p>
 			    </div>
