@@ -6,28 +6,28 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
             <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
             <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
+     </head>
          <!-- Start of Angular App -->
     <body ng-app="contact" ng-controller="contactCtrl">
 	    
-	    <header>
+	       <header>
                <nav id="header-nav" class="navbar navbar-default">
-        <div class="container">
-          <div class="navbar-header">
+               <div class="container">
+               <div class="navbar-header">
 
-            <div class="navbar-brand">
+              <div class="navbar-brand">
               <a href="#"><h2>Nordea Liv og Pension</h2></a>
-            </div>
-	   <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+              </div>
+	      <button id="navbarToggle" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
-		   </div>
+              </button>
+	      </div>
 
-          <div id="collapsable-nav" class="collapse navbar-collapse">
-            <ul id="nav-list" class="nav navbar-nav navbar-right">
+              <div id="collapsable-nav" class="collapse navbar-collapse">
+              <ul id="nav-list" class="nav navbar-nav navbar-right">
               <li>
                 <a href="#">
                   <span class="glyphicon glyphicon-home"></span><br class="hidden-xs"> Forside</a>
@@ -40,11 +40,11 @@
                 <a href="form.html">
                   <span class="glyphicon glyphicon-envelope"></span><br class="hidden-xs">Kontakt Os</a>
               </li>
-            </ul><!-- #nav-list -->
-          </div><!-- .collapse .navbar-collapse -->
-        </div><!-- .container -->
-      </nav><!-- #header-nav -->
-    </header>
+              </ul><!-- #nav-list -->
+              </div><!-- .collapse .navbar-collapse -->
+              </div><!-- .container -->
+              </nav><!-- #header-nav -->
+              </header>
            
            <!-- Start of Contact Form -->
            <div id="form-wrapper" class="container">
@@ -62,67 +62,69 @@
 					     <label for="name" name="name">Navn: </label>
 					     </div>
 					     <input id="name" class="form-control" type="text" ng-model="name" name="name" maxlength="20" placeholder="Navn" pattern="[a-zA-Z]+" ng-pattern-restrict required >
-		                     </div>
-                                     <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="has-error">Indtast dit Navn.</p>
+		                             </div>
+                                            <p ng-show="contactForm.name.$invalid && !contactForm.name.$pristine" class="has-error">Indtast dit Navn.</p>
 	                          
-		   </div>
+		                            </div>
           
           <!-- E-mail Input-->
           <div class="form-group" ng-class="{ 'has-error' : contactForm.email.$invalid && !contactForm.email.$pristine }">
-				  <div class="input-div"> 
-			           <div class="input-icon">
+				           <div class="input-div"> 
+			                   <div class="input-icon">
 					     <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 					     <label for="email">Email: </label>
 				             </div>
-					    <input id="email" class="form-control" type="email" ng-model="email" name="email" placeholder="Email" required>
-				    </div>
-				    <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="has-error">Skriv en gyldig e-mailadresse.</p>
-			   </div>
+					     <input id="email" class="form-control" type="email" ng-model="email" name="email" placeholder="Email" required>
+				             </div>
+				             <p ng-show="contactForm.email.$invalid && !contactForm.email.$pristine" class="has-error">Skriv en gyldig e-mailadresse.</p>
+			                     </div>
          
          <!-- Phone Input -->
          
          <div class="form-group" ng-class="{ 'has-error' : contactForm.phone.$invalid && !contactForm.phone.$pristine }">
 				
-				<div class="input-div">
-					<div class="input-icon">
-					<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
-					<label for="phone">Mobilnummer: </label>
-					</div>
-					<input id="phone" class="form-control" type="text" ng-model="phone" name="phone" placeholder="Feks. 91755748"  ng-pattern="nums" required >
-				</div>
-				<p ng-show="contactForm.phone.$error.pattern && !contactForm.phone.$pristine" class="has-error">Skriv et gyldigt telefonnummer</p>
-			</div>
+				            <div class="input-div">
+					    <div class="input-icon">
+					    <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+					    <label for="phone">Mobilnummer: </label>
+					    </div>
+					    <input id="phone" class="form-control" type="text" ng-model="phone" name="phone" placeholder="Feks. 91755748"  ng-pattern="nums" required >
+				            </div>
+				            <p ng-show="contactForm.phone.$error.pattern && !contactForm.phone.$pristine" class="has-error">Skriv et gyldigt telefonnummer</p>
+			                    </div>
       
       <!-- Message -->
       
       <div class="form-group" ng-class="{ 'has-error' : contactForm.userMessage.$invalid && !contactForm.userMessage.$pristine, 'has-success' : contactForm.userMessage.$valid && !contactForm.userMessage.$pristine }">
 				
-				<p ng-show="contactForm.userMessage.$error.minlength" class="help-block">Besked er forkort ...</p>
-				<p ng-show="contactForm.userMessage.$error.maxlength" class="help-block">Besked er for lang</p>
-				<div class="input-div">
-				     <div class="input-icon">
-				     <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
-				    <label for="userMessage">Besked</label>
-				     </div>
-			        <textarea id="userMessage" ng-model="userMessage" name="userMessage" class="form-control" ng-minlength="20" ng-maxlength="180" rows="12" placeholder="Skriv besked her" required></textarea>
-	                        </div>
-	      </div>
+				          <p ng-show="contactForm.userMessage.$error.minlength" class="help-block">Besked er forkort ...</p>
+				          <p ng-show="contactForm.userMessage.$error.maxlength" class="help-block">Besked er for lang</p>
+				          <div class="input-div">
+				          <div class="input-icon">
+				          <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+				          <label for="userMessage">Besked</label>
+				          </div>
+			                  <textarea id="userMessage" ng-model="userMessage" name="userMessage" class="form-control" ng-minlength="20" ng-maxlength="180" rows="12" placeholder="Skriv besked her" required></textarea>
+	                                  </div>
+	                                  </div>
 	      
     
      <!-- Button -->    
-                   <button name="submit" class="btn btn-primary btn-large center" type="submit" ng-disabled="contactForm.$invalid">Send</button>
-		   <button class="btn btn-primary btn-large center" type="reset" ng-click="reset()">Reset</button>
+       <button name="submit" class="btn btn-primary btn-large center" type="submit" ng-disabled="contactForm.$invalid">Send</button>
+       <button class="btn btn-primary btn-large center" type="reset" ng-click="reset()">Reset</button>
 	 
-	</form>
-  	</div>
+       </form>
+       </div>
     
     <!-- Confirmation Message -->
     <div id="submitMessage" class="container" ng-show="contactForm.$submitted">
         
         <h1>Tak for besked!</h1>
+	    
     </div>
+	    
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="script.js"></script>
     
 
 </body>
